@@ -1,15 +1,9 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "jest/globals": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,31 +12,32 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "jest"],
   "rules": {
-    "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/prop-types": "off",
+    "react/button-has-type": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
+    "react/jsx-filename-extension": [
+      1,
       {
-        "allowExpressions": true
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "comma-dangle": "off",
+    "arrow-body-style": "off",
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/self-closing-comp": "off"
   }
 }
