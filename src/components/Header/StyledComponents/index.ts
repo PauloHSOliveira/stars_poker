@@ -16,11 +16,3 @@ export const Logo = styled.div`
   background-image: url(${Poker});
   background-size: cover;
 `;
-
-export const Nav = styled.nav``;
-
-export const List = styled.ul``;
-
-export const ListItem = styled.li`
-  color: #fff;
-`;
